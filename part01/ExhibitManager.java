@@ -48,6 +48,13 @@ public class ExhibitManager extends Manager {
 		try {
 			int choice = 0;
 			boolean back = false;
+			
+			// Are there any exhibits?
+			if (exhibits.size() == 0) {
+				System.out.println("There are no exhibits.");
+				return;
+			}
+						
 			while (!back) {
 				// Format each exhibit.
 				String[] options = new String[exhibits.size()];

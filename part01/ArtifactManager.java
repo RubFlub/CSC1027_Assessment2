@@ -51,6 +51,12 @@ public class ArtifactManager extends Manager {
 		try {
 			int choice = 0;
 			boolean back = false;
+			
+			// Are there any artifacts?
+			if (artifacts.size() == 0) {
+				System.out.println("There are no artifacts.");
+				return;
+			}
 			while (!back) {
 				// Format each artifact.
 				String[] options = new String[artifacts.size()];
