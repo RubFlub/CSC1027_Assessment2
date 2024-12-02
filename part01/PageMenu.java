@@ -1,5 +1,7 @@
 package part01;
 
+import java.util.Arrays;
+
 /**
  * Extended menu class to provide support for pages.
  */
@@ -175,4 +177,12 @@ public class PageMenu extends Menu {
 		pageNum++;
 		displayPage();
 	}
+
+	@Override
+	public String toString() {
+		return "PageMenu [itemsPerPage=" + itemsPerPage + ", pageNum=" + pageNum + ", items=" + Arrays.toString(items)
+				+ ", title=" + title + "]";
+	}
+	
+	
 }

@@ -96,6 +96,23 @@ public class MonthSchedule {
 	 */
 	@Override
 	public String toString() {
-		return "MonthSchedule [id=" + id + ", month=" + month + ", exhibits=" + exhibits + "]";
+		return "MonthSchedule [id=" + id + ", month=" + month + ", exhibits=" + exhibitsToString(exhibits) + "]";
+	}
+	
+	/**
+	 * Converts exhibits to a string.
+	 * @param exhibits - the exhibits array
+	 * @return string representation of exhibits.
+	 */
+	private String exhibitsToString(Exhibit[] exhibits) {
+		String str = "";
+		for (int i = 0; i < exhibits.length; i++) {
+			if (i != 0) {
+				str += " ";
+			}
+			str += exhibits[i];
+		}
+		
+		return str;
 	}
 }

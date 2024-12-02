@@ -32,7 +32,7 @@ public enum Month {
 	 * @return the specified value.
 	 */
 	public static Month get(int index) throws Exception {
-		if (index < 0 || index > ENUMS.length) {
+		if (index < 0 || index >= ENUMS.length) {
 			throw new Exception("Invalid value for index: " + index);
 		}
 		return ENUMS[index];
